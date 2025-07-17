@@ -24,7 +24,8 @@ This is my very first personal portfolio website! It's a simple, responsive sing
   - Version Control  
 
 ## Live Demo
-
-
+You can view my portfolio live here:  
+[https://makcoder671.github.io/Mako-Portfolio/](https://makcoder671.github.io/Mako-Portfolio/)
+ 
 ## Feedback Welcome
 This project reflects my learning journey, and I’m always looking to improve. If you have ideas, tips, or feedback, feel free to open an issue or comment in the repo!
