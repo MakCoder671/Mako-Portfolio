@@ -1,31 +1,44 @@
-# Mako Wusstig's Developer Portfolio
+# 💼 Mako Wusstig's Developer Portfolio
 
-This is my very first personal portfolio website! It's a simple, responsive single-page site built using HTML, CSS, and Bootstrap. It highlights my background, technical skills, certifications, and goals as an aspiring front-end developer and IT support specialist.
+Welcome to my personal developer portfolio — a responsive, multi-page website showcasing my journey as a front-end developer, network administrator, and IT support specialist. This project is a reflection of my hands-on learning, built entirely with HTML, CSS, and JavaScript.
 
-## Features
-- Responsive design using Bootstrap 5
-- Smooth scrolling navigation
-- "About Me" and "Resume" sections
-- Embedded certifications
-- Stylish hover effects and custom CSS styling
-- Ready to expand with future projects
+## ✨ Features
 
-## Skills & Tech Used
-- HTML5  
-- CSS3 (custom and Bootstrap-based)  
-- Bootstrap 5  
-- Git & GitHub  
+- Fully responsive layout
+- Clean multi-page navigation
+- Custom “Dashboard” homepage and “About Me” section
+- Eye-catching branding with custom images and color themes
+- Modular structure for future sections (e.g., Projects, Contact)
+- Custom CSS styling (no frameworks)
 
-## Education & Certifications
-- B.S. in Information Technology (in progress)  
-- Meta Front-End Developer Certificate (in progress)  
+## 🔧 Tech Stack
+
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Git & GitHub**
+- **VS Code**
+
+## 📚 Education & Certifications
+
+- **B.S. in Information Technology** *(in progress)*  
+- **Meta Front-End Developer Certificate** *(in progress)*  
   - Introduction to Front-End Development  
   - Programming with JavaScript  
-  - Version Control  
+  - Version Control with Git  
 
-## Live Demo
-You can view my portfolio live here:  
-[https://makcoder671.github.io/Mako-Portfolio/](https://makcoder671.github.io/Mako-Portfolio/)
- 
-## Feedback Welcome
-This project reflects my learning journey, and I’m always looking to improve. If you have ideas, tips, or feedback, feel free to open an issue or comment in the repo!
+## 🌐 Live Site
+
+🔗 [Visit My Live Portfolio](https://makcoder671.github.io/Mako-Portfolio/)
+
+## 🧠 Why This Project?
+
+This portfolio is more than just a resume — it's an ongoing practice tool and creative outlet. I’m building it from scratch to reinforce my knowledge and develop real-world web skills.
+
+## 🗣️ Feedback Welcome
+
+I’m always learning and open to feedback. If you have suggestions, ideas, or want to collaborate, feel free to open an issue or fork the repo!
+
+---
+
+🛠️ *Stay tuned — more features and projects will be added soon!*
