@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mako's Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    section {
+      padding: 100px 20px; /* space for content and nav overlap */
+    }
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="bg-dark text-white p-3">
+    <em>Mako Wusstig</em>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container justify-content-center">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#resume">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sections -->
+  <main>
+    <section id="home">
+      <div class="container">
+        <h2>Welcome to My Portfolio</h2>
+        <p><strong>"Every pixel I place is a step toward the future I’m building — one line of code, one challenge, one breakthrough at a time."
+ </strong><br><em>— Mako Wusstig</em></p>
+        </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p class="lead">I’m Mako Wusstig, an aspiring front-end developer and IT support specialist currently earning my B.S. in Information Technology with a concentration in Software Development.</p>
+        <p>I’m actively building my skills through the Meta Front-End Developer Certificate on Coursera, where I’ve learned HTML, CSS, JavaScript, and version control. I also build custom gaming PCs as a hobby, which has given me hands-on experience in troubleshooting and hardware setup.</p>
+        <p>This portfolio marks my first step toward showcasing what I can do. I’m excited to keep learning, build real-world projects, and contribute to a development or support team that values growth and curiosity.</p>
+      </div>
+    </section>
+
+  <section id="resume">
+  <div class="container">
+    <h2>Resume</h2>
+    
+    <h3>Contact Information</h3>
+    <p><strong>Name:</strong> Mako Wusstig</p>
+    <p><strong>Email:</strong> <a href="mailto:wusstig.mako@gmail.com">wusstig.mako@gmail.com</a></p>
+    <p><strong>Phone:</strong> +1 (971) 341-0871</p>
+    <p><strong>Location:</strong> Shelton, WA</p>
+
+    <h3>Education</h3>
+    <p><strong>Southern New Hampshire University</strong><br>
+    B.S. in Information Technology, Concentration in Software Development<br>
+    Expected Graduation: April 2026<br>
+    GPA: 3.739</p>
+
+    <h3>Certifications</h3>
+    <ul>
+      <li>Meta Front-End Developer Certificate (In Progress)</li>
+      <li>Introduction to Front-End Development – Coursera / Meta</li>
+      <li>Programming with JavaScript – Coursera / Meta</li>
+      <li>Version Control – Coursera / Meta</li>
+    </ul>
+
+    <h3>Technical Skills</h3>
+    <ul>
+      <li>Languages: HTML, CSS, JavaScript</li>
+      <li>Version Control: Git, GitHub</li>
+      <li>Other: Responsive Design, Debugging, Terminal/Shell</li>
+    </ul>
+
+    <h3>Experience</h3>
+    <p><strong>Patient Service Specialist</strong> – Providence Health, Shelton, WA<br>
+    January 2025 – Present</p>
+    <ul>
+      <li>Provides front-desk support in a clinical setting, assisting patients with appointments, check-in/out, and documentation</li>
+      <li>Manages confidential records using Electronic Medical Records (EMR) systems</li>
+      <li>Handles phone inquiries, insurance verification, and patient communications</li>
+    </ul>
+
+    <p><strong>Administrative Assistant</strong> – Providence Health, Shelton, WA<br>
+    April 2023 – December 2024</p>
+    <ul>
+      <li>Performed clerical support functions in a healthcare environment</li>
+      <li>Scheduled appointments and maintained office documentation</li>
+      <li>Supported the care team with patient intake and coordination</li>
+    </ul>
+
+    <h3>Download PDF</h3>
+    <p><a href="assets/Resume.pdf" target="_blank" rel="noopener">Click here to view or download my resume as a PDF</a></p>
+</section>
+
+<section id="certifications" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Certifications</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Introduction to Front-End Development</h5>
+            <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#cert1" aria-expanded="false">
+              View Certificate
+            </button>
+            <div class="collapse mt-3" id="cert1">
+              <a href="assets/Intro_FED.pdf" target="_blank" class="d-block mt-2">Click To View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Programming with JavaScript</h5>
+            <button class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#cert2">
+              View Certificate
+            </button>
+            <div class="collapse mt-3" id="cert2">
+              <a href="assets/JS_Certificate.pdf" target="_blank" class="d-block mt-2">Click To View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Version Control</h5>
+            <button class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#cert3">
+              View Certificate
+            </button>
+            <div class="collapse mt-3" id="cert3">
+              <a href="assets/Version_Control.pdf" target="_blank" class="d-block mt-2">Click To View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+
+    <div class="project-gallery">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="slider">
+          <button class="slider-btn prev">&#10094;</button>
+          <div class="slides">
+            <img src="assets/luckyS-2.png" alt="Screenshot LuckySchwab" class="active-slide">
+            <img src="assets/LuckyS.png" alt="Screenshot LS HomePage">
+            <img src="assets/LuckyS-3.png" alt="Screenshot LS Contact Us Page">
+          </div>
+          <button class="slider-btn next">&#10095;</button>
+        </div>
+        <h3>Lucky Shrub Website</h3>
+        <p>A fictional business site built with HTML & CSS for the Meta Coursera course.</p>
+        <a href="https://makcoder671.github.io/LuckySProject/" target="_blank">👀 View Live</a><br>
+        <a href="https://github.com/MakCoder671/LuckySProject" target="_blank">👨‍💻 Source Code</a>
+      </div>
+
+      <!-- Project 2 (Update once ready) -->
+      <div class="project-card">
+        <div class="slider">
+          <button class="slider-btn prev">&#10094;</button>
+          <div class="slides">
+            <img src="" alt="" class="active-slide">
+            <img src="" alt="">
+          </div>
+          <button class="slider-btn next">&#10095;</button>
+        </div>
+        <h3>Coming Soon!</h3>
+        <a href="#" target="_blank">👀 View Live</a><br>
+        <a href="#" target="_blank">👨‍💻 Source Code</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="bg-dark text-white text-center p-3">
+    &copy; 2025 Mako Wusstig. All Rights Reserved.
+  </footer>
+
+  <script src="java.js"></script>
+</body>
+</html>
+ 
