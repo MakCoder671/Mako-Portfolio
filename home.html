@@ -1,30 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mako's welcoming portfolio landing page with a modern dark theme and light-mode option.">
   <title>Mako's Portfolio</title>
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="h-screen overflow-hidden">
-    
-    <!--Header-->
-    <header class="h-20">
-        <nav class="border">
-            <h1>Mako's Portfolio</h1>
-                 <ul class="flex space-x-4 items-center justify-evenly text-lg">
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="projects.html">Projects</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                 </ul>
+<body class="min-h-screen text-slate-100 transition-colors duration-300" data-theme="dark">
+  <div class="relative isolate min-h-screen overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(34,211,238,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.18),_transparent_30%)]"></div>
+
+    <header class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+      <a href="home.html" class="text-xl font-semibold tracking-[0.2em] text-slate-50 uppercase">Mako Wusstig</a>
+
+      <div class="flex items-center gap-3">
+        <nav class="hidden items-center gap-6 text-sm font-medium text-slate-300 md:flex">
+          <a class="transition hover:text-cyan-300" href="about.html">About</a>
+          <a class="transition hover:text-cyan-300" href="projects.html">Projects</a>
+          <a class="transition hover:text-cyan-300" href="contact.html">Contact</a>
         </nav>
+
+        <button id="theme-toggle" type="button" class="rounded-full border border-white/15 bg-white/10 px-3 py-2 text-sm font-medium text-slate-100 shadow-lg backdrop-blur transition hover:bg-white/20" aria-label="Switch to light mode">
+          ☀️
+        </button>
+      </div>
     </header>
 
-  <!-- JavaScript -->
+    <main class="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8 lg:py-24">
+      <section class="max-w-2xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">Welcome</p>
+        <h1 class="mt-4 text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl lg:text-6xl">
+          I create thoughtful experiences that feel calm, modern, and personal.
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-slate-300">
+          I’m Mako, a curious developer and designer building polished web experiences with clarity, motion, and heart.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="projects.html" class="rounded-full bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400">
+            Explore Projects
+          </a>
+          <a href="contact.html" class="rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-semibold text-slate-100 backdrop-blur transition hover:bg-white/20">
+            Say Hello
+          </a>
+        </div>
+      </section>
+
+      <aside class="rounded-3xl border border-white/10 bg-slate-900/70 p-7 shadow-2xl shadow-black/20 backdrop-blur-xl">
+        <div class="flex items-center gap-3">
+          <span class="h-3 w-3 rounded-full bg-emerald-400"></span>
+          <span class="text-sm font-medium text-slate-300">Currently available for new ideas</span>
+        </div>
+
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          <div class="rounded-2xl border border-white/10 bg-white/10 p-4">
+            <p class="text-sm font-semibold text-slate-50">Design Focus</p>
+            <p class="mt-2 text-sm leading-6 text-slate-300">Clean interfaces, intuitive interactions, and thoughtful pacing.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/10 p-4">
+            <p class="text-sm font-semibold text-slate-50">Build Style</p>
+            <p class="mt-2 text-sm leading-6 text-slate-300">Responsive layouts with a calm visual language and modern polish.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/10 p-4 sm:col-span-2">
+            <p class="text-sm font-semibold text-slate-50">What I love</p>
+            <p class="mt-2 text-sm leading-6 text-slate-300">Turning simple concepts into immersive experiences that feel welcoming from the first glance.</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
   <script src="home.js"></script>
 </body>
 </html>
