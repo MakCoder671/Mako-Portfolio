@@ -1,0 +1,72 @@
+/* This file controls styles shared by the mobile version of every page */
+
+/* Mobile navigation appears below the header on smaller screens */
+.mobile-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 0 24px;
+  padding: 12px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.mobile-navigation a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.mobile-navigation a:hover {
+  color: #67e8f9;
+}
+
+/* Shows visitors which page they are currently viewing */
+.mobile-navigation a[aria-current="page"] {
+  color: #67e8f9;
+}
+
+/* Changes the mobile navigation colors when light mode is active */
+body[data-theme="light"] .mobile-navigation {
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+body[data-theme="light"] .mobile-navigation a {
+  color: #334155;
+}
+
+body[data-theme="light"] .mobile-navigation a:hover,
+body[data-theme="light"] .mobile-navigation a[aria-current="page"] {
+  color: #0891b2;
+}
+
+/* Certificate cards use one column on phones so the titles and links stay readable */
+.certification-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* Two cards fit comfortably once the screen reaches a small tablet size */
+@media (min-width: 640px) {
+  .certification-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* The desktop navigation takes over when the screen reaches 768 pixels */
+@media (min-width: 768px) {
+  .mobile-navigation {
+    display: none;
+  }
+}
+
+/* Larger screens can display all four certificates in one row */
+@media (min-width: 1024px) {
+  .certification-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

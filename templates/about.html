@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Mako Wusstig, an aspiring software developer with a background in healthcare administration and SaaS.">
+  <title>About | Mako Wusstig</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/mobile.css' %}">
+</head>
+
+<body class="min-h-screen text-slate-100 transition-colors duration-300" data-theme="dark">
+  <!-- Holds the entire About page and keeps the background inside the screen -->
+  <div class="relative isolate min-h-screen overflow-hidden">
+    <!-- Creates the cyan and purple glow behind the page content -->
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(34,211,238,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.18),_transparent_30%)]"></div>
+
+    <!-- Top navigation for moving between portfolio pages -->
+    <header class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+      <a href="{% url 'pages:home' %}" class="text-xl font-semibold tracking-[0.2em] text-slate-50 uppercase">Mako Wusstig</a>
+
+      <div class="flex items-center gap-3">
+        <nav class="hidden items-center gap-6 text-sm font-medium text-slate-300 md:flex" aria-label="Main navigation">
+          <a class="text-cyan-300" href="{% url 'pages:about' %}" aria-current="page">About</a>
+          <a class="transition hover:text-cyan-300" href="{% url 'pages:projects' %}">Projects</a>
+          <a class="transition hover:text-cyan-300" href="{% url 'pages:contact' %}">Contact</a>
+        </nav>
+
+        <!-- about.js finds this button by its ID and uses it to change the theme -->
+        <button id="theme-toggle" type="button" class="rounded-full border border-white/15 bg-white/10 px-3 py-2 text-sm font-medium text-slate-100 shadow-lg backdrop-blur transition hover:bg-white/20" aria-label="Switch to light mode">
+          ☀️
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile navigation stays visible when the desktop navigation is hidden -->
+    <nav class="mobile-navigation" aria-label="Mobile navigation">
+      <a class="text-cyan-300" href="{% url 'pages:about' %}" aria-current="page">About</a>
+      <a class="transition hover:text-cyan-300" href="{% url 'pages:projects' %}">Projects</a>
+      <a class="transition hover:text-cyan-300" href="{% url 'pages:contact' %}">Contact</a>
+    </nav>
+
+    <main class="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-20">
+      <!-- Introduction and portrait become two columns on larger screens -->
+      <section class="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center" aria-labelledby="about-title">
+        <!-- Main introduction shown beside the portrait -->
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">About Me</p>
+          <h1 id="about-title" class="mt-4 text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl lg:text-6xl">
+            Building a future in software, one thoughtful project at a time.
+          </h1>
+          <div class="mt-6 max-w-2xl border-l-2 border-cyan-400/60 pl-5">
+            <p class="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">My Goal</p>
+            <p class="mt-3 text-lg leading-8 text-slate-300">
+              I want to build software and apps that reduce administrative work and give people more time for the work they care about. Whether that means helping a real estate agent spend less time on marketing and paperwork, or helping a business owner track expenses and profit more easily, my goal is to create practical tools that support their workflow instead of adding to it. When technology handles more of the repetitive work, people have more time for their clients, their craft, and what matters most outside of work.
+            </p>
+          </div>
+        </div>
+
+        <!-- Personal graduation portrait -->
+        <figure class="mx-auto w-full max-w-md">
+          <div class="relative aspect-[4/5] overflow-hidden rounded-3xl border border-cyan-400/30 bg-slate-900 shadow-2xl shadow-black/30">
+            <img src="{% static 'assets/mako-graduation.jpeg' %}" alt="Mako Wusstig wearing his Southern New Hampshire University graduation cap and gown" class="h-full w-full object-cover object-top">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent px-6 pb-6 pt-16">
+              <figcaption>
+                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Southern New Hampshire University</p>
+                <p class="mt-2 text-sm text-slate-300">B.S. Information Technologies</p>
+              </figcaption>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- Full story and quick professional details -->
+      <section class="mt-20 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start" aria-labelledby="my-story-title">
+        <!-- Longer personal and professional story -->
+        <article class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">My Story</p>
+          <h2 id="my-story-title" class="mt-4 text-3xl font-semibold text-slate-50 sm:text-4xl">Where I’ve been and where I’m going.</h2>
+
+          <div class="mt-6 space-y-5 text-base leading-8 text-slate-300 sm:text-lg">
+            <p>
+              I earned a Bachelor of Science in Information Technologies, concentrating in Software Development, from Southern New Hampshire University. I enjoy building simple, responsive landing pages with HTML, Tailwind CSS, and JavaScript, and I’m currently expanding my skills by learning iOS development.
+            </p>
+            <p>
+              My professional background is in healthcare administration, and I now work for a SaaS company that provides software for medical spas. That experience has shown me how thoughtful technology can simplify everyday work and create better experiences for both businesses and the people they serve.
+            </p>
+            <p>
+              Away from work, I’m a husband and father of four. I enjoy spending time with my family, coding, boxing, and finding better ways to learn. Life is also kept lively by our three dogs: two Dobermans and a pocket bully.
+            </p>
+          </div>
+        </article>
+
+        <!-- Quick details make the main information easier to scan -->
+        <aside class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-2xl shadow-black/20 backdrop-blur-xl sm:p-8" aria-label="Quick professional details">
+          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-purple-400">Quick Details</p>
+
+          <dl class="mt-6 divide-y divide-white/10">
+            <div class="py-4 first:pt-0">
+              <dt class="text-xs font-semibold uppercase tracking-wider text-cyan-400">Education</dt>
+              <dd class="mt-2 text-sm leading-6 text-slate-300">B.S. Information Technologies<br>Southern New Hampshire University</dd>
+            </div>
+            <div class="py-4">
+              <dt class="text-xs font-semibold uppercase tracking-wider text-cyan-400">Current Work</dt>
+              <dd class="mt-2 text-sm leading-6 text-slate-300">SaaS for the medical spa industry</dd>
+            </div>
+            <div class="py-4">
+              <dt class="text-xs font-semibold uppercase tracking-wider text-cyan-400">Building With</dt>
+              <dd class="mt-2 text-sm leading-6 text-slate-300">HTML · Tailwind CSS · JavaScript</dd>
+            </div>
+            <div class="py-4 last:pb-0">
+              <dt class="text-xs font-semibold uppercase tracking-wider text-cyan-400">Currently Learning</dt>
+              <dd class="mt-2 text-sm leading-6 text-slate-300">iOS Development</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <!-- Education and certificate links -->
+      <section id="certifications" class="mt-20 scroll-mt-8" aria-labelledby="certifications-title">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">Education & Certifications</p>
+          <h2 id="certifications-title" class="mt-4 text-3xl font-semibold text-slate-50 sm:text-4xl">Learning backed by real credentials.</h2>
+          <p class="mt-4 leading-7 text-slate-300">These Meta courses helped strengthen my foundation in frontend development, JavaScript, and version control.</p>
+        </div>
+
+        <!-- mobile.css controls how many certificate cards appear in each row -->
+        <div class="certification-grid mt-8">
+          <article class="certificate-card flex flex-col rounded-2xl border border-white/10 bg-slate-900/70 p-5 shadow-xl shadow-black/10 backdrop-blur-xl">
+            <p class="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-400">Meta · Coursera</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-50">Introduction to Front-End Development</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-300">Completed June 2025</p>
+            <a href="{% static 'assets/Intro_FED.pdf' %}" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200" aria-label="View Introduction to Front-End Development certificate PDF">
+              View Certificate <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="certificate-card flex flex-col rounded-2xl border border-white/10 bg-slate-900/70 p-5 shadow-xl shadow-black/10 backdrop-blur-xl">
+            <p class="text-xs font-semibold uppercase tracking-[0.25em] text-purple-400">Meta · Coursera</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-50">HTML and CSS in Depth</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-300">Completed July 2025</p>
+            <a href="{% static 'assets/HTML_CSS_in_Depth.pdf' %}" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200" aria-label="View HTML and CSS in Depth certificate PDF">
+              View Certificate <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="certificate-card flex flex-col rounded-2xl border border-white/10 bg-slate-900/70 p-5 shadow-xl shadow-black/10 backdrop-blur-xl">
+            <p class="text-xs font-semibold uppercase tracking-[0.25em] text-purple-400">Meta · Coursera</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-50">Programming with JavaScript</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-300">Completed June 2025</p>
+            <a href="{% static 'assets/JS_Certificate.pdf' %}" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200" aria-label="View Programming with JavaScript certificate PDF">
+              View Certificate <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="certificate-card flex flex-col rounded-2xl border border-white/10 bg-slate-900/70 p-5 shadow-xl shadow-black/10 backdrop-blur-xl">
+            <p class="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-400">Meta · Coursera</p>
+            <h3 class="mt-4 text-xl font-semibold text-slate-50">Version Control</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-300">Completed July 2025</p>
+            <a href="{% static 'assets/Version_Control.pdf' %}" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200" aria-label="View Version Control certificate PDF">
+              View Certificate <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Explains the development process I use when building projects -->
+      <section class="mt-20 pb-6 lg:pb-8" aria-labelledby="how-i-build-title">
+        <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-2xl shadow-black/20 backdrop-blur-xl sm:p-8 lg:p-10">
+        <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <!-- Introduction to AI-assisted engineering -->
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">How I Build</p>
+            <h2 id="how-i-build-title" class="mt-4 text-3xl font-semibold leading-tight text-slate-50 sm:text-4xl">
+              What is AI-assisted engineering?
+            </h2>
+            <p class="mt-5 leading-7 text-slate-300">
+              AI-assisted engineering uses AI to speed up research, implementation, and repetitive work while keeping technical decisions and responsibility with the developer. I still write code myself because creating and experimenting is part of the fun. I use AI where it helps me move faster, then review the changes, trace how each feature connects, and test the result before accepting it into a project.
+            </p>
+          </div>
+
+          <!-- These cards show the steps I follow when reviewing AI-assisted work -->
+          <div class="grid gap-4 sm:grid-cols-2">
+            <article class="rounded-2xl border border-white/10 bg-white/10 p-5">
+              <p class="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-400">01 · Understand</p>
+              <h3 class="mt-3 font-semibold text-slate-50">Trace the connections</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-300">I follow how the HTML, CSS, JavaScript, and backend pieces work together.</p>
+            </article>
+
+            <article class="rounded-2xl border border-white/10 bg-white/10 p-5">
+              <p class="text-xs font-semibold uppercase tracking-[0.25em] text-purple-400">02 · Review</p>
+              <h3 class="mt-3 font-semibold text-slate-50">Inspect the changes</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-300">I review generated code for readability, security, and whether it solves the right problem.</p>
+            </article>
+
+            <article class="rounded-2xl border border-white/10 bg-white/10 p-5">
+              <p class="text-xs font-semibold uppercase tracking-[0.25em] text-purple-400">03 · Test</p>
+              <h3 class="mt-3 font-semibold text-slate-50">Try it, break it, improve it</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-300">I test normal behavior and edge cases, then fix what does not work as expected.</p>
+            </article>
+
+            <article class="rounded-2xl border border-white/10 bg-white/10 p-5">
+              <p class="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-400">04 · Own</p>
+              <h3 class="mt-3 font-semibold text-slate-50">Stay responsible</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-300">The final code and product are my responsibility, no matter which tools helped create them.</p>
+            </article>
+          </div>
+        </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Loads the JavaScript that controls the About page theme button -->
+  <script src="{% static 'js/about.js' %}"></script>
+</body>
+</html>

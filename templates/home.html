@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet Mako Wusstig, an aspiring software developer building responsive web experiences and learning iOS development.">
+  <title>Mako's Portfolio</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/mobile.css' %}">
+</head>
+
+<body class="min-h-screen text-slate-100 transition-colors duration-300" data-theme="dark">
+  <!-- Holds the entire Home page and keeps the background inside the screen -->
+  <div class="relative isolate min-h-screen overflow-hidden">
+    <!-- Creates the cyan and purple glow behind the page content -->
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(34,211,238,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.18),_transparent_30%)]"></div>
+
+    <!-- Top navigation shared by the portfolio pages -->
+    <header class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+      <a href="{% url 'pages:home' %}" class="flex items-center gap-3 text-slate-50">
+        <span class="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/30 bg-cyan-400/10 text-sm font-bold text-cyan-300">MW</span>
+        <span class="text-lg font-semibold tracking-wide">Mako Wusstig</span>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <nav class="hidden items-center gap-6 text-sm font-medium text-slate-300 md:flex">
+          <a class="transition hover:text-cyan-300" href="{% url 'pages:about' %}">About</a>
+          <a class="transition hover:text-cyan-300" href="{% url 'pages:projects' %}">Projects</a>
+          <a class="transition hover:text-cyan-300" href="{% url 'pages:contact' %}">Contact</a>
+        </nav>
+
+        <!-- home.js finds this button by its ID and uses it to change the theme -->
+        <button id="theme-toggle" type="button" class="rounded-full border border-white/15 bg-white/10 px-3 py-2 text-sm font-medium text-slate-100 shadow-lg backdrop-blur transition hover:bg-white/20" aria-label="Switch to light mode">
+          ☀️
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile navigation stays visible when the desktop navigation is hidden -->
+    <nav class="mobile-navigation" aria-label="Mobile navigation">
+      <a class="transition hover:text-cyan-300" href="{% url 'pages:about' %}">About</a>
+      <a class="transition hover:text-cyan-300" href="{% url 'pages:projects' %}">Projects</a>
+      <a class="transition hover:text-cyan-300" href="{% url 'pages:contact' %}">Contact</a>
+    </nav>
+
+    <!-- Main Home page content becomes two columns on larger screens -->
+    <main class="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8 lg:py-24">
+      <!-- Introduction and main page links -->
+      <section class="max-w-2xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">Aspiring Software Developer</p>
+        <h1 class="mt-4 text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl lg:text-6xl">
+          Hi, I’m<br>
+          <span class="bg-gradient-to-r from-cyan-300 to-purple-400 bg-clip-text text-transparent">Mako Wusstig.</span>
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-slate-300">
+          I build clean, responsive web experiences while growing my skills in software development, iOS, and AI-assisted engineering.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="{% url 'pages:projects' %}" class="rounded-full bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400">
+            View My Work
+          </a>
+          <a href="{% url 'pages:about' %}" class="rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-semibold text-slate-100 backdrop-blur transition hover:bg-white/20">
+            More About Me
+          </a>
+        </div>
+      </section>
+
+      <!-- Developer profile shown beside the introduction -->
+      <aside class="rounded-3xl border border-white/10 bg-slate-900/70 p-7 shadow-2xl shadow-black/20 backdrop-blur-xl">
+        <div class="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-400">Developer Profile</p>
+            <p class="mt-2 text-lg font-semibold text-slate-50">Always building. Always learning.</p>
+          </div>
+          <span class="h-3 w-3 shrink-0 rounded-full bg-emerald-400 shadow-lg shadow-emerald-400/50" title="Available"></span>
+        </div>
+
+        <div class="mt-6 grid gap-4 sm:grid-cols-2">
+          <div class="rounded-2xl border border-white/10 bg-white/10 p-4">
+            <p class="text-xs font-semibold uppercase tracking-wider text-cyan-400">Current Stack</p>
+            <p class="mt-2 text-sm leading-6 text-slate-300">HTML · Tailwind CSS · JavaScript</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/10 p-4">
+            <p class="text-xs font-semibold uppercase tracking-wider text-purple-400">Learning Next</p>
+            <p class="mt-2 text-sm leading-6 text-slate-300">iOS Development</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/10 p-4">
+            <p class="text-xs font-semibold uppercase tracking-wider text-cyan-400">Background</p>
+            <p class="mt-2 text-sm leading-6 text-slate-300">Healthcare Administration · SaaS</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/10 p-4">
+            <p class="text-xs font-semibold uppercase tracking-wider text-purple-400">Status</p>
+            <p class="mt-2 text-sm leading-6 text-slate-300">Open to projects and collaboration</p>
+          </div>
+        </div>
+
+        <!-- Small education preview links to the full certificate section on About -->
+        <div class="mt-6 flex flex-col gap-4 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wider text-cyan-400">Education & Credentials</p>
+            <p class="mt-2 text-sm text-slate-300">B.S. Information Technologies · 4 Meta certificates</p>
+          </div>
+          <a href="{% url 'pages:about' %}#certifications" class="text-sm font-semibold text-cyan-300 transition hover:text-cyan-200">View credentials →</a>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <!-- Loads the theme controls after the HTML has finished loading -->
+  <script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>

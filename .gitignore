@@ -1,0 +1,22 @@
+# Keeps the local Python environment out of GitHub
+.venv/
+
+# Keeps private environment variables and passwords out of GitHub
+.env
+.env.*
+!.env.example
+
+# Python creates these cache files while the application runs
+__pycache__/
+*.py[cod]
+
+# Local databases and database backups should never be committed
+*.sqlite3
+*.sql
+database-backups/
+
+# Temporary files used while checking PDFs and other assets
+tmp/
+
+# macOS creates this file automatically inside folders
+.DS_Store

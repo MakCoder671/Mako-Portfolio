@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en" class="h-full">
 <head>
   <meta charset="UTF-8">
@@ -6,30 +7,44 @@
   <meta name="description" content="Explore web development projects created by Mako Wusstig.">
   <title>Projects | Mako Wusstig</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/mobile.css' %}">
 </head>
 
 <body class="min-h-screen text-slate-100 transition-colors duration-300" data-theme="dark">
+  <!-- Holds the entire Projects page -->
   <div class="relative isolate min-h-screen overflow-hidden">
+    <!-- Creates the grid and colored glow in the page background -->
     <div class="absolute inset-0 -z-10 bg-[linear-gradient(rgba(15,23,42,0.16)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.16)_1px,transparent_1px),radial-gradient(circle_at_top_left,_rgba(34,211,238,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.18),_transparent_30%)] bg-[size:42px_42px,42px_42px,auto,auto]"></div>
 
+    <!-- Navigation bar -->
     <header class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
-      <a href="home.html" class="text-xl font-semibold tracking-[0.2em] text-slate-50 uppercase">Mako Wusstig</a>
+      <a href="{% url 'pages:home' %}" class="text-xl font-semibold tracking-[0.2em] text-slate-50 uppercase">Mako Wusstig</a>
 
       <div class="flex items-center gap-3">
         <nav class="hidden items-center gap-6 text-sm font-medium text-slate-300 md:flex" aria-label="Main navigation">
-          <a class="transition hover:text-cyan-300" href="about.html">About</a>
-          <a class="text-cyan-300" href="projects.html" aria-current="page">Projects</a>
-          <a class="transition hover:text-cyan-300" href="contact.html">Contact</a>
+          <a class="transition hover:text-cyan-300" href="{% url 'pages:about' %}">About</a>
+          <a class="text-cyan-300" href="{% url 'pages:projects' %}" aria-current="page">Projects</a>
+          <a class="transition hover:text-cyan-300" href="{% url 'pages:contact' %}">Contact</a>
         </nav>
 
+        <!-- projects.js uses this button to change the page theme -->
         <button id="theme-toggle" type="button" class="rounded-full border border-white/15 bg-white/10 px-3 py-2 text-sm font-medium text-slate-100 shadow-lg backdrop-blur transition hover:bg-white/20" aria-label="Switch to light mode">
           ☀️
         </button>
       </div>
     </header>
 
+    <!-- Mobile navigation stays visible when the desktop navigation is hidden -->
+    <nav class="mobile-navigation" aria-label="Mobile navigation">
+      <a class="transition hover:text-cyan-300" href="{% url 'pages:about' %}">About</a>
+      <a class="text-cyan-300" href="{% url 'pages:projects' %}" aria-current="page">Projects</a>
+      <a class="transition hover:text-cyan-300" href="{% url 'pages:contact' %}">Contact</a>
+    </nav>
+
+    <!-- Main Projects page content -->
     <main class="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-20">
+      <!-- Page introduction and project progress bar -->
       <section class="mx-auto max-w-3xl text-center">
         <p class="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">Project Select</p>
         <h1 class="mt-4 text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl lg:text-6xl">Choose a build to explore.</h1>
@@ -45,7 +60,9 @@
         </div>
       </section>
 
+      <!-- These are the cards for each project -->
       <section class="mt-14 grid gap-7 md:grid-cols-2 xl:grid-cols-3" aria-label="Project gallery">
+        <!-- First project card shows the portfolio that is currently being built -->
         <article class="project-card group overflow-hidden rounded-3xl border border-cyan-400/30 bg-slate-900/80 shadow-2xl shadow-cyan-950/20 backdrop-blur-xl" style="--card-delay: 0ms;">
           <div class="relative aspect-[16/10] overflow-hidden border-b border-white/10 bg-gradient-to-br from-cyan-500/25 via-slate-950 to-purple-500/25">
             <div class="absolute inset-4 flex flex-col rounded-xl border border-white/10 bg-slate-950/70 p-4 shadow-2xl transition duration-500 group-hover:scale-[1.03]">
@@ -85,7 +102,7 @@
             </div>
 
             <div class="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">
-              <a href="home.html" class="project-action inline-flex h-11 w-11 items-center justify-center rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 transition hover:-translate-y-1 hover:bg-cyan-400/20" aria-label="View Mako Portfolio live" title="View live project">
+              <a href="{% url 'pages:home' %}" class="project-action inline-flex h-11 w-11 items-center justify-center rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 transition hover:-translate-y-1 hover:bg-cyan-400/20" aria-label="View Mako Portfolio live" title="View live project">
                 <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
               </a>
               <button type="button" disabled class="inline-flex h-11 w-11 cursor-not-allowed items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-500" aria-label="Source code link coming soon" title="Source code link coming soon">
@@ -96,6 +113,7 @@
           </div>
         </article>
 
+        <!-- Locked card saved for the next project -->
         <article class="project-card group overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 shadow-2xl shadow-black/20 backdrop-blur-xl" style="--card-delay: 120ms;">
           <div class="relative flex aspect-[16/10] items-center justify-center overflow-hidden border-b border-white/10 bg-gradient-to-br from-purple-500/15 via-slate-950 to-cyan-500/10">
             <div class="project-lock flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-slate-300 shadow-xl">
@@ -114,6 +132,7 @@
           </div>
         </article>
 
+        <!-- Locked card saved for a future project -->
         <article class="project-card group overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 shadow-2xl shadow-black/20 backdrop-blur-xl md:col-span-2 xl:col-span-1" style="--card-delay: 240ms;">
           <div class="relative flex aspect-[16/10] items-center justify-center overflow-hidden border-b border-white/10 bg-gradient-to-br from-amber-500/10 via-slate-950 to-purple-500/15">
             <div class="project-lock flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-slate-300 shadow-xl">
@@ -135,6 +154,7 @@
     </main>
   </div>
 
-  <script src="home.js"></script>
+  <!-- Loads the JavaScript that controls the Projects page -->
+  <script src="{% static 'js/projects.js' %}"></script>
 </body>
 </html>

@@ -1,0 +1,2 @@
+# Django runs the Python backend and will handle pages, forms, and admin access
+Django==5.2.16
