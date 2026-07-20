@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en" class="h-full">
 <head>
   <meta charset="UTF-8">
@@ -7,8 +6,8 @@
   <meta name="description" content="Meet Mako Wusstig, an aspiring software developer building responsive web experiences and learning iOS development.">
   <title>Mako's Portfolio</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <link rel="stylesheet" href="{% static 'css/mobile.css' %}">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/mobile.css">
 </head>
 
 <body class="min-h-screen text-slate-100 transition-colors duration-300" data-theme="dark">
@@ -19,16 +18,16 @@
 
     <!-- Top navigation shared by the portfolio pages -->
     <header class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
-      <a href="{% url 'pages:home' %}" class="flex items-center gap-3 text-slate-50">
+      <a href="/" class="flex items-center gap-3 text-slate-50">
         <span class="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/30 bg-cyan-400/10 text-sm font-bold text-cyan-300">MW</span>
         <span class="text-lg font-semibold tracking-wide">Mako Wusstig</span>
       </a>
 
       <div class="flex items-center gap-3">
         <nav class="hidden items-center gap-6 text-sm font-medium text-slate-300 md:flex">
-          <a class="transition hover:text-cyan-300" href="{% url 'pages:about' %}">About</a>
-          <a class="transition hover:text-cyan-300" href="{% url 'pages:projects' %}">Projects</a>
-          <a class="transition hover:text-cyan-300" href="{% url 'pages:contact' %}">Contact</a>
+          <a class="transition hover:text-cyan-300" href="/about.cfm">About</a>
+          <a class="transition hover:text-cyan-300" href="/projects.cfm">Projects</a>
+          <a class="transition hover:text-cyan-300" href="/contact.cfm">Contact</a>
         </nav>
 
         <!-- home.js finds this button by its ID and uses it to change the theme -->
@@ -40,9 +39,9 @@
 
     <!-- Mobile navigation stays visible when the desktop navigation is hidden -->
     <nav class="mobile-navigation" aria-label="Mobile navigation">
-      <a class="transition hover:text-cyan-300" href="{% url 'pages:about' %}">About</a>
-      <a class="transition hover:text-cyan-300" href="{% url 'pages:projects' %}">Projects</a>
-      <a class="transition hover:text-cyan-300" href="{% url 'pages:contact' %}">Contact</a>
+      <a class="transition hover:text-cyan-300" href="/about.cfm">About</a>
+      <a class="transition hover:text-cyan-300" href="/projects.cfm">Projects</a>
+      <a class="transition hover:text-cyan-300" href="/contact.cfm">Contact</a>
     </nav>
 
     <!-- Main Home page content becomes two columns on larger screens -->
@@ -59,10 +58,10 @@
         </p>
 
         <div class="mt-8 flex flex-wrap gap-4">
-          <a href="{% url 'pages:projects' %}" class="rounded-full bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400">
+          <a href="/projects.cfm" class="rounded-full bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400">
             View My Work
           </a>
-          <a href="{% url 'pages:about' %}" class="rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-semibold text-slate-100 backdrop-blur transition hover:bg-white/20">
+          <a href="/about.cfm" class="rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-semibold text-slate-100 backdrop-blur transition hover:bg-white/20">
             More About Me
           </a>
         </div>
@@ -103,13 +102,20 @@
             <p class="text-xs font-semibold uppercase tracking-wider text-cyan-400">Education & Credentials</p>
             <p class="mt-2 text-sm text-slate-300">B.S. Information Technologies · 4 Meta certificates</p>
           </div>
-          <a href="{% url 'pages:about' %}#certifications" class="text-sm font-semibold text-cyan-300 transition hover:text-cyan-200">View credentials →</a>
+          <a href="/about.cfm#certifications" class="text-sm font-semibold text-cyan-300 transition hover:text-cyan-200">View credentials →</a>
         </div>
       </aside>
     </main>
+
+    <!-- Keeps the private login easy to find without placing it in the visitor navigation -->
+    <footer class="mx-auto flex max-w-7xl justify-center px-6 pb-8 lg:justify-end lg:px-8">
+      <a href="/admin/adminLogin.cfm" class="text-xs font-medium text-slate-400 transition hover:text-cyan-300">
+        Admin Login →
+      </a>
+    </footer>
   </div>
 
   <!-- Loads the theme controls after the HTML has finished loading -->
-  <script src="{% static 'js/home.js' %}"></script>
+  <script src="/js/home.js"></script>
 </body>
 </html>

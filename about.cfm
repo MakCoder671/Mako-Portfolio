@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en" class="h-full">
 <head>
   <meta charset="UTF-8">
@@ -7,8 +6,8 @@
   <meta name="description" content="Learn about Mako Wusstig, an aspiring software developer with a background in healthcare administration and SaaS.">
   <title>About | Mako Wusstig</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <link rel="stylesheet" href="{% static 'css/mobile.css' %}">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/mobile.css">
 </head>
 
 <body class="min-h-screen text-slate-100 transition-colors duration-300" data-theme="dark">
@@ -19,13 +18,13 @@
 
     <!-- Top navigation for moving between portfolio pages -->
     <header class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
-      <a href="{% url 'pages:home' %}" class="text-xl font-semibold tracking-[0.2em] text-slate-50 uppercase">Mako Wusstig</a>
+      <a href="/" class="text-xl font-semibold tracking-[0.2em] text-slate-50 uppercase">Mako Wusstig</a>
 
       <div class="flex items-center gap-3">
         <nav class="hidden items-center gap-6 text-sm font-medium text-slate-300 md:flex" aria-label="Main navigation">
-          <a class="text-cyan-300" href="{% url 'pages:about' %}" aria-current="page">About</a>
-          <a class="transition hover:text-cyan-300" href="{% url 'pages:projects' %}">Projects</a>
-          <a class="transition hover:text-cyan-300" href="{% url 'pages:contact' %}">Contact</a>
+          <a class="text-cyan-300" href="/about.cfm" aria-current="page">About</a>
+          <a class="transition hover:text-cyan-300" href="/projects.cfm">Projects</a>
+          <a class="transition hover:text-cyan-300" href="/contact.cfm">Contact</a>
         </nav>
 
         <!-- about.js finds this button by its ID and uses it to change the theme -->
@@ -37,9 +36,9 @@
 
     <!-- Mobile navigation stays visible when the desktop navigation is hidden -->
     <nav class="mobile-navigation" aria-label="Mobile navigation">
-      <a class="text-cyan-300" href="{% url 'pages:about' %}" aria-current="page">About</a>
-      <a class="transition hover:text-cyan-300" href="{% url 'pages:projects' %}">Projects</a>
-      <a class="transition hover:text-cyan-300" href="{% url 'pages:contact' %}">Contact</a>
+      <a class="text-cyan-300" href="/about.cfm" aria-current="page">About</a>
+      <a class="transition hover:text-cyan-300" href="/projects.cfm">Projects</a>
+      <a class="transition hover:text-cyan-300" href="/contact.cfm">Contact</a>
     </nav>
 
     <main class="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-20">
@@ -62,7 +61,7 @@
         <!-- Personal graduation portrait -->
         <figure class="mx-auto w-full max-w-md">
           <div class="relative aspect-[4/5] overflow-hidden rounded-3xl border border-cyan-400/30 bg-slate-900 shadow-2xl shadow-black/30">
-            <img src="{% static 'assets/mako-graduation.jpeg' %}" alt="Mako Wusstig wearing his Southern New Hampshire University graduation cap and gown" class="h-full w-full object-cover object-top">
+            <img src="/assets/mako-graduation.jpeg" alt="Mako Wusstig wearing his Southern New Hampshire University graduation cap and gown" class="h-full w-full object-cover object-top">
             <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent px-6 pb-6 pt-16">
               <figcaption>
                 <p class="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Southern New Hampshire University</p>
@@ -132,7 +131,7 @@
             <p class="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-400">Meta · Coursera</p>
             <h3 class="mt-4 text-xl font-semibold text-slate-50">Introduction to Front-End Development</h3>
             <p class="mt-3 text-sm leading-6 text-slate-300">Completed June 2025</p>
-            <a href="{% static 'assets/Intro_FED.pdf' %}" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200" aria-label="View Introduction to Front-End Development certificate PDF">
+            <a href="/assets/Intro_FED.pdf" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200" aria-label="View Introduction to Front-End Development certificate PDF">
               View Certificate <span aria-hidden="true">↗</span>
             </a>
           </article>
@@ -141,7 +140,7 @@
             <p class="text-xs font-semibold uppercase tracking-[0.25em] text-purple-400">Meta · Coursera</p>
             <h3 class="mt-4 text-xl font-semibold text-slate-50">HTML and CSS in Depth</h3>
             <p class="mt-3 text-sm leading-6 text-slate-300">Completed July 2025</p>
-            <a href="{% static 'assets/HTML_CSS_in_Depth.pdf' %}" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200" aria-label="View HTML and CSS in Depth certificate PDF">
+            <a href="/assets/HTML_CSS_in_Depth.pdf" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200" aria-label="View HTML and CSS in Depth certificate PDF">
               View Certificate <span aria-hidden="true">↗</span>
             </a>
           </article>
@@ -150,7 +149,7 @@
             <p class="text-xs font-semibold uppercase tracking-[0.25em] text-purple-400">Meta · Coursera</p>
             <h3 class="mt-4 text-xl font-semibold text-slate-50">Programming with JavaScript</h3>
             <p class="mt-3 text-sm leading-6 text-slate-300">Completed June 2025</p>
-            <a href="{% static 'assets/JS_Certificate.pdf' %}" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200" aria-label="View Programming with JavaScript certificate PDF">
+            <a href="/assets/JS_Certificate.pdf" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200" aria-label="View Programming with JavaScript certificate PDF">
               View Certificate <span aria-hidden="true">↗</span>
             </a>
           </article>
@@ -159,7 +158,7 @@
             <p class="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-400">Meta · Coursera</p>
             <h3 class="mt-4 text-xl font-semibold text-slate-50">Version Control</h3>
             <p class="mt-3 text-sm leading-6 text-slate-300">Completed July 2025</p>
-            <a href="{% static 'assets/Version_Control.pdf' %}" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200" aria-label="View Version Control certificate PDF">
+            <a href="/assets/Version_Control.pdf" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200" aria-label="View Version Control certificate PDF">
               View Certificate <span aria-hidden="true">↗</span>
             </a>
           </article>
@@ -214,6 +213,6 @@
   </div>
 
   <!-- Loads the JavaScript that controls the About page theme button -->
-  <script src="{% static 'js/about.js' %}"></script>
+  <script src="/js/about.js"></script>
 </body>
 </html>

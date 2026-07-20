@@ -85,6 +85,38 @@ body[data-theme="light"] .border-white\/15 {
   transform: translate(2px, -2px);
 }
 
+/* Only the selected screenshot is displayed inside a project gallery */
+.project-gallery-image {
+  display: none;
+}
+
+.project-gallery-image-active {
+  display: block;
+  animation: project-image-enter 300ms ease-out;
+}
+
+/* These dots show which project screenshot is currently selected */
+.project-gallery-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.55);
+  transition: width 200ms ease, background-color 200ms ease;
+}
+
+/* Keeps the gallery controls clickable above every screenshot and badge */
+.project-gallery-previous,
+.project-gallery-next,
+.project-gallery-dot {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.project-gallery-dot-active {
+  width: 22px;
+  background: #22d3ee;
+}
+
 @keyframes project-card-enter {
   to {
     opacity: 1;
@@ -102,10 +134,16 @@ body[data-theme="light"] .border-white\/15 {
   50% { transform: translateY(-8px); }
 }
 
+@keyframes project-image-enter {
+  from { opacity: 0; transform: scale(1.02); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .project-card,
   .project-progress,
-  .project-lock {
+  .project-lock,
+  .project-gallery-image-active {
     animation: none;
     opacity: 1;
     transform: none;

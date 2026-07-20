@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en" class="h-full">
 <head>
   <meta charset="UTF-8">
@@ -7,8 +6,8 @@
   <meta name="description" content="Contact Mako Wusstig about freelance landing pages, website updates, and project collaborations.">
   <title>Contact | Mako Wusstig</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <link rel="stylesheet" href="{% static 'css/mobile.css' %}">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/mobile.css">
 </head>
 
 <body class="min-h-screen text-slate-100 transition-colors duration-300" data-theme="dark">
@@ -19,13 +18,13 @@
 
     <!-- Navigation bar -->
     <header class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
-      <a href="{% url 'pages:home' %}" class="text-xl font-semibold tracking-[0.2em] text-slate-50 uppercase">Mako Wusstig</a>
+      <a href="/" class="text-xl font-semibold tracking-[0.2em] text-slate-50 uppercase">Mako Wusstig</a>
 
       <div class="flex items-center gap-3">
         <nav class="hidden items-center gap-6 text-sm font-medium text-slate-300 md:flex" aria-label="Main navigation">
-          <a class="transition hover:text-cyan-300" href="{% url 'pages:about' %}">About</a>
-          <a class="transition hover:text-cyan-300" href="{% url 'pages:projects' %}">Projects</a>
-          <a class="text-cyan-300" href="{% url 'pages:contact' %}" aria-current="page">Contact</a>
+          <a class="transition hover:text-cyan-300" href="/about.cfm">About</a>
+          <a class="transition hover:text-cyan-300" href="/projects.cfm">Projects</a>
+          <a class="text-cyan-300" href="/contact.cfm" aria-current="page">Contact</a>
         </nav>
 
         <!-- contact.js uses this button to change the page theme -->
@@ -37,9 +36,9 @@
 
     <!-- Mobile navigation stays visible when the desktop navigation is hidden -->
     <nav class="mobile-navigation" aria-label="Mobile navigation">
-      <a class="transition hover:text-cyan-300" href="{% url 'pages:about' %}">About</a>
-      <a class="transition hover:text-cyan-300" href="{% url 'pages:projects' %}">Projects</a>
-      <a class="text-cyan-300" href="{% url 'pages:contact' %}" aria-current="page">Contact</a>
+      <a class="transition hover:text-cyan-300" href="/about.cfm">About</a>
+      <a class="transition hover:text-cyan-300" href="/projects.cfm">Projects</a>
+      <a class="text-cyan-300" href="/contact.cfm" aria-current="page">Contact</a>
     </nav>
 
     <!-- Main content becomes two columns on larger screens -->
@@ -103,6 +102,6 @@
   </div>
 
   <!-- Loads the JavaScript that controls the Contact page -->
-  <script src="{% static 'js/contact.js' %}"></script>
+  <script src="/js/contact.js"></script>
 </body>
 </html>

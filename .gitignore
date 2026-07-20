@@ -1,17 +1,16 @@
-# Keeps the local Python environment out of GitHub
-.venv/
-
 # Keeps private environment variables and passwords out of GitHub
 .env
 .env.*
 !.env.example
 
-# Python creates these cache files while the application runs
-__pycache__/
-*.py[cod]
+# CommandBox downloads the local Lucee server into this folder
+.server/
 
-# Local databases and database backups should never be committed
-*.sqlite3
+# Lucee and CommandBox may create these local files
+.cfconfig.json
+server-*.json
+
+# Database exports and backups may contain private customer information
 *.sql
 database-backups/
 

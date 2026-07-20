@@ -1,0 +1,14 @@
+{
+    "name":"Mako Portfolio",
+    "app":{
+        "cfengine":"lucee@6"
+    },
+    "web":{
+        "webroot":".",
+        "http":{
+            "port":8080
+        }
+    },
+    "openBrowser":true,
+    "noopen":true
+}

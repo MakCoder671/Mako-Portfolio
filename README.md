@@ -1,8 +1,26 @@
-Updating Portfolio Website! Doing a Redesign of the entire layout and design for better showcasing and presentation
+# Mako Portfolio
 
-//Under Development... 
-//Phase 1: Layout - Complete
-//Phase 2: Input - in progess - desgning backend workflow for contact page
-//Phase 3: Interactable JS: in progress; changes to be made once full project is complete
-//Phase 4: Codex Debugging > Playwright Automated Testing > Manual Testing. 
-    //If Phase 4 all works, commit to GitHub > Push to GitHub > Retrieve Live Link through GitHub and test > Pull to make any changes || Market and Post.
+A responsive portfolio built with HTML, CSS, JavaScript, CFML, and the Lucee server.
+
+## Run the website
+
+1. Install Java 21 and CommandBox.
+2. Open a terminal in this project folder.
+3. Run `box server start`.
+4. Open `http://localhost:8080` if the browser does not open automatically.
+
+Run `box server stop` when you want to stop Lucee.
+
+## File map
+
+- `Application.cfc` contains settings shared by the entire CFML application.
+- `server.json` tells CommandBox to run this project with Lucee.
+- `index.cfm` contains the Home page.
+- `about.cfm` contains the About page.
+- `projects.cfm` contains the Projects page.
+- `contact.cfm` contains the Contact page and its form.
+- `css/` contains the shared and mobile styles.
+- `js/` contains the browser JavaScript for each page.
+- `assets/` contains the portrait and certificate PDFs.
+
+The next backend phase will add separate `api/`, `components/`, and `database/` folders for securely processing and saving contact inquiries.
